@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 4</title>
+</head>
+
+<body>
+    <script>
+        /* Задани 4 */
+
+        let userNum = (prompt(`Введите число`));
+
+        units = userNum % 10; //* единицы
+        dozens = userNum / 10 % 10; // десятки
+        hundreds = userNum / 100; //* сотни
+        if (userNum < 100) {
+            alert(`В числе ${userNum} количество сотен: 0 , десятков: ${Math.trunc(dozens)}, единиц: ${Math.trunc(units)}`);
+        }
+
+        if (userNum < 1000) {
+            alert(`В числе ${userNum} количество сотен: ${Math.trunc(hundreds)}, десятков: ${Math.trunc(dozens)}, единиц: ${Math.trunc(units)}`);
+
+        }
+
+        if (userNum >= 1000) {
+
+            userNum = String(userNum);
+            userNumStr = userNum.slice(-3);
+            userNumlastStr = Number(userNumStr);
+            units = userNumlastStr % 10; //* единицы
+            dozens = userNumlastStr / 10 % 10; // десятки
+            hundreds = userNumlastStr / 100; //* сотни
+
+            alert(`В числе ${userNum} количество сотен: ${Math.trunc(hundreds)}, десятков: ${Math.trunc(dozens)}, единиц: ${Math.trunc(units)}`);
+        }
+        false {
+            userNum = String(userNum);
+            alert(`Пожалуйста, введите цифры`);
+        };
+
+
+
+    </script>
+</body>
+
+</html>
