@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 3</title>
+</head>
+
+<body>
+    <script>
+        // задание 1
+        for (let i = 0; i <= 10; i++) {
+            if (i === 0) {
+                console.log(`${i} - это ноль`);
+            }
+            if (i % 2 == 0 && i !== 0) {
+                console.log(`${i} - четное число`);
+            }
+            if (i % 2 !== 0) {
+                console.log(`${i} - нечетное число`);
+            }
+        };
+        // задание 2
+        const num = [1, 2, 3, 4, 5, 6, 7,];
+        num.splice(3, 2);
+        console.log(num);
+
+        //задание 3
+
+        let randNum = new Array();
+        randNum.length = 5;
+        min = 0;
+        max = 10;
+        for (let i = 0; i < randNum.length; i++) {
+            randNum[i] = Math.floor(Math.random() * (max - min)) + min;;
+        }
+        console.log(randNum.map(randItem => randItem * 2));
+
+        //задание 4
+
+        const newMass = [1, 6, 8, 3, 7];
+        //newMass.splice(3,1);  один из вариантов .
+        let numEl = newMass.indexOf(3);
+        if (numEl === 3) {
+            newMass.splice(numEl, 1);
+        };
+        let newnumEl = newMass.map(newMassItem => newMassItem * 1.1);
+        console.log(newMass);
+        console.log(newnumEl);
+
+
+        //задание 5
+
+        let i;
+        function clg() {
+            console.log(i);
+        }
+        for (i = 0, console.log(i); i < 9; i++, clg());
+
+        //задание 6
+
+        let str = "";
+        let hill = "x";
+        for (let i = 0; i < 20; i++) {
+            str += hill;
+            console.log(str);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
